@@ -1,0 +1,264 @@
+<!-- <div class="container"> -->
+    <!-- BEGIN SALE PRODUCT & NEW ARRIVALS -->
+    <!-- <div class="row margin-bottom-40" > -->
+      <!-- BEGIN SALE PRODUCT -->
+      <!-- <div class="col-md-12 sale-product">
+        <h2>{{det.cat_name}}</h2>
+        <div class="owl-carousel owl-carousel5" >
+          <div  class="col-lg-3 col-md-6 mb-4" *ngFor="let r of response.cat">
+            <div class="product-item" >
+              <div class="pi-img-wrapper">
+                <img src="http://localhost/angularwork/sofine/backend/public/upload/uploads/{{r.file}}" class="img-responsive" alt="Berry Lace Dress">
+                <div>
+                  <a href="http://localhost/angularwork/sofine/backend/public/upload/uploads/{{r.file}}" class="btn btn-default fancybox-button">Zoom</a>
+                  <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                </div>
+              </div>
+              <h3><a href="shop-item.html">{{r.description}}</a></h3>
+              <div class="pi-price">{{r.cat_name}}</div>
+              <p class=" add2cart">{{r.role}}</p>
+              <div class="sticker sticker-sale"></div>
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div> -->
+          <!-- banner-2 -->
+	<div class="page-head_agile_info_w3l page-head_agile_info_w3l-2">
+
+	</div>
+	<!-- //banner-2 -->
+	<!-- page -->
+	<div class="services-breadcrumb">
+		<div class="agile_inner_breadcrumb">
+			<div class="container">
+				<ul class="w3_short">
+					<li>
+						<a  routerLink="/">Home</a>
+						<i>|</i>
+					</li>
+					<li>{{det.cat_name}}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //page -->
+
+	<!-- top Products -->
+	<div class="ads-grid  py-sm-5 py-4">
+		<div class="container py-xl-4 py-lg-2">
+			<!-- tittle heading -->
+			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+				<span>A</span>ll
+				{{det.cat_name}}</h3>
+			<!-- //tittle heading -->
+			<div class="row">
+				<!-- product left -->
+				<div class="agileinfo-ads-display col-lg-9">
+					<div class="wrapper">
+						<!-- first section -->
+						<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mt-4">
+							<div class="row">
+								<div class="col-md-4 product-men" *ngFor="let r of response.cat">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item text-center">
+											<img src="http://localhost/angularwork/sofine/backend/public/upload/uploads/{{r.file}}" alt="http://localhost/angularwork/sofine/backend/public/upload/uploads/{{r.file}}">
+											<div class="men-cart-pro">
+												<div class="inner-men-cart-pro">
+														
+													<a (click)="navigate(r.id)" class="link-product-add-cart">Quick View</a>
+												</div>
+											</div>
+										</div>
+										  <div class=" px-1">
+                                <span class="float-left font-weight-bold">
+										<img class="rounded-circle" style="width:30px;height:30px ;" src="http://localhost/angularwork/sofine/backend/public/upload/uploads/{{r.ufile}}" alt="">
+                                </span>
+                                <span class="float-right">
+                                 <strong>{{r.role}}</strong>
+                                </span>
+                              </div>
+										<span class="float-left"><p>{{r.name}}</p></span>
+										<div class="item-info-product text-center border-top mt-4">
+											<h4 class="pt-1">
+												<a (click)="navigate(r.id)">{{r.description}}</a>
+											</h4>
+											<div class="info-product-price my-2">
+												<span class="item_price">{{r.cat_name}}</span>
+												<!-- <p>{{r.role}} </p> -->
+											</div>
+                      <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                     
+                          <a> <input (click)="navigate(r.id)" name="submit" value="View more" class="button btn" /></a>
+                      <!-- </fieldset>
+                    </form> -->
+                  </div> 
+
+										</div>
+									</div>
+								</div>
+							
+							</div>
+						</div>
+						<!-- //first section -->
+			
+						
+					</div>
+				</div>
+				
+			
+				<div class="col-lg-3 mt-lg-0 mt-4 p-lg-0">
+					<div class="side-bar p-sm-4 p-3">
+						<div class="search-hotel border-bottom py-2">
+							<h3 class="agileits-sear-head mb-3">All categories</h3>
+							<form action="#" method="post">
+								<input type="search" placeholder="Search Brand..." name="search" required="">
+								<input type="submit" value=" ">
+							</form>
+							<div class="left-side py-2">
+								<ul>
+                          <li *ngFor="let r of cat">
+                            <input type="checkbox" class="checked">
+                            <span class="span"  >{{r.cat_name}}</span>
+                          </li>
+                          
+                      
+								
+								</ul>
+							</div>
+						</div>
+						<!-- reviews -->
+						<div class="customer-rev border-bottom left-side py-2">
+							<h3 class="agileits-sear-head mb-3">Customer Review</h3>
+							<ul>
+								<li>
+									<a href="#">
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<span>5.0</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+										<span>4.0</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star-half-o" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+										<span>3.5</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+										<span>3.0</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star-half-o" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+										<span>2.5</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //reviews -->
+						<!-- price -->
+						<div class="range border-bottom py-2">
+							<h3 class="agileits-sear-head mb-3">Price</h3>
+							<div class="w3l-range">
+								<ul>
+									<li>
+										<a href="#">Under $1,000</a>
+									</li>
+									<li class="my-1">
+										<a href="#">$1,000 - $5,000</a>
+									</li>
+									<li>
+										<a href="#">$5,000 - $10,000</a>
+									</li>
+									<li class="my-1">
+										<a href="#">$10,000 - $20,000</a>
+									</li>
+									<li>
+										<a href="#">$20,000 $30,000</a>
+									</li>
+									<li class="mt-1">
+										<a href="#">Over $30,000</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //price -->
+						<!-- discounts -->
+				
+						<!-- //discounts -->
+						<!-- offers -->
+					
+						<!-- //offers -->
+						<!-- delivery -->
+						<div class="left-side border-bottom py-2">
+							<h3 class="agileits-sear-head mb-3">Cash On Delivery</h3>
+							<ul>
+								<li>
+									<input type="checkbox" class="checked">
+									<span class="span">Eligible for Cash On Delivery</span>
+								</li>
+							</ul>
+						</div>
+						<!-- //delivery -->
+						<!-- arrivals -->
+						<div class="left-side border-bottom py-2">
+							<h3 class="agileits-sear-head mb-3">New Arrivals</h3>
+							<ul>
+								<li>
+									<input type="checkbox" class="checked">
+									<span class="span">Last 30 days</span>
+								</li>
+								<li>
+									<input type="checkbox" class="checked">
+									<span class="span">Last 90 days</span>
+								</li>
+							</ul>
+						</div>
+						<!-- //arrivals -->
+						<!-- Availability -->
+						<div class="left-side py-2">
+							<h3 class="agileits-sear-head mb-3">Availability</h3>
+							<ul>
+								<li>
+									<input type="checkbox" class="checked">
+									<span class="span">Exclude Out of Stock</span>
+								</li>
+							</ul>
+						</div>
+						<!-- //Availability -->
+					</div>
+				</div>
+				<!-- //product right -->
+			</div>
+		</div>
+	</div>
+	<!-- //top products -->

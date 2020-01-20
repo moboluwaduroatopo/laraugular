@@ -94,18 +94,7 @@ class RegistrationController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $reg= Registration::find($id);
-        $this->validate($request,[
-        'username'=>'required|min:4',
-        'email'=>'required',
-        'pwd'=>'required'
-        ]);
-        $reg->username=$request->input('username');
-        $reg->email =$request->input('email');
-        $reg->pwd=$request->input('pwd');
-        $reg->save();
-        return redirect('/registration/')->with('success','Update successfully');
-        //retu
+         //
     }
 
     /**

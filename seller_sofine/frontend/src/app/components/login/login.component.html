@@ -1,0 +1,82 @@
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center">Log In</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form #loginForm=ngForm (ngSubmit)="onSubmit()">
+
+          <div class="alert alert-danger" [hidden]="!error">
+            {{error}}
+          </div>
+          <div class="form-group">
+            <label class="col-form-label">Email</label>
+            <input type="text" class="form-control" placeholder=" " name="email" [(ngModel)]="form.email" required="">
+          </div>
+          <div class="form-group">
+            <label class="col-form-label">Password</label>
+            <input type="password" class="form-control" placeholder=" " name="Password" [(ngModel)]="form.password" required="">
+          </div>
+          <div class="right-w3l">
+            <input type="submit" class="form-control" value="Log in">
+          </div>
+          <div class="sub-w3l">
+            <div class="custom-control custom-checkbox mr-sm-2">
+              <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+              <label class="custom-control-label" for="customControlAutosizing">Remember me?</label>
+            </div>
+          </div>
+          <p class="text-center dont-do mt-3">Don't have an account?
+            <a href="#" data-toggle="modal" data-target="#exampleModal2">
+              Register Now</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="mt-4 col-8 offset-2">
+  <div class="card">
+    <div class="card-header">Login Here</div>
+    <div class="card-body">
+      <form #loginForm=ngForm (ngSubmit)="onSubmit()">
+
+        <div class="alert alert-danger" [hidden]="!error">
+          {{error}}
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email" [(ngModel)]="form.email" required>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password" [(ngModel)]="form.password"
+              required>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-10 offset-2">
+
+            <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Sign in</button>
+
+            <a routerLink="/signup" class="btn btn-info float-right">Sign Up</a>
+
+          </div>
+        </div>
+        <small class=float-right>
+          <a routerLink="/request-password-reset">Reset Password</a>
+        </small>
+      </form>
+    </div>
+  </div>
+</div> -->

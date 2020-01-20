@@ -1,0 +1,135 @@
+ <!-- Page Wrapper -->
+ <div id="wrapper">
+
+  <!-- Sidebar -->
+  <app-login></app-login>
+  <!-- End of Sidebar -->
+
+  <!-- Content Wrapper -->
+  <div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+      <!-- Topbar -->
+     <app-navbar></app-navbar>
+      <!-- End of Topbar -->
+
+      <!-- Begin Page Content -->
+      <div >
+        <div class="mt-4 col-8 offset-2">
+          <div class="card">
+            <div class="card-header">Add Categories Type Here</div>
+            <div class="card-body">
+              <form #signupForm=ngForm (ngSubmit)="onSubmit()">
+                  <div class="alert alert-success" [hidden]="!message">
+                      {{message}}
+                    </div>
+                    <div class="alert alert-danger" [hidden]="!error">
+                        {{error}}
+                      </div>
+                      <div class="form-group row">
+                          <div class="col-sm-10">
+                            <select  class="form-control" name="cat_id"  [(ngModel)]="form.cat_id">
+                              <option *ngFor="let r of responsecat" value="{{r.id}}">{{r.cat_name}}</option>
+                            </select>
+                          </div>
+                        </div>
+                <div class="form-group row">
+                   <h5><label class="btn btn-primary btn-file">
+                        choose file
+                        <input  type="file" (change)="uploadFile($event)" name="file" style="display: none;"> 
+                       
+                    </label></h5>
+                </div>
+        
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Description</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="description" class="form-control" id="inputEmail3" placeholder="Description" [(ngModel)]="form.description" required>
+                    
+                  </div>
+                </div>
+               
+                <div class="form-group row">
+                  <div class="col-sm-10">
+                    <input type="hidden" name="cat_type" class="form-control" id="inputPasswordConfirmation3" 
+                    [(ngModel)]="response.id"  value="{{response.id}}">
+                   
+                  </div>
+                </div>
+               
+                
+        
+                <div class="form-group row">
+                  <div class="col-sm-10 offset-2">
+        
+                    <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid">Add </button>
+                  </div>
+                </div>
+        
+              </form>
+            </div>
+          </div>
+        </div>
+         <!-- <div class="container">
+          <table class="table">
+            <tr *ngFor="let r of responsecat">
+              <td>{{r.cat_name}}</td>
+              <td>{{r.price}}</td>
+              <td>{{r.shortd}}</td>
+              <td>{{r.quantity}}</td>
+             <td> <a href=""  class="btn btn-primary">Edit</a></td>
+              <td><button class="btn btn-dangar">Delete</button></td> 
+            </tr>
+          </table>
+        </div> 
+         -->
+        
+      
+      </div>
+      <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+    <!-- <footer class="sticky-footer bg-white">
+      <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+          <span>Copyright &copy; Your Website 2019</span>
+        </div>
+      </div>
+    </footer> -->
+    <!-- End of Footer -->
+
+  </div>
+  <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        <a class="btn btn-primary" href="login.html">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
+

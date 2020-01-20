@@ -1,0 +1,67 @@
+<div class="mt-4 col-8 offset-2">
+  <div class="card">
+    <div class="card-header">Add shop details Here</div>
+    <div class="card-body">
+      <form #signupForm=ngForm (ngSubmit)="onSubmit()">
+          <div class="alert alert-success" [hidden]="!message">
+              {{message}}
+            </div>
+            <div class="alert alert-danger" [hidden]="!error">
+                {{error}}
+              </div>
+              <div class="form-group row">
+                  <div class="col-sm-10">
+                    <select  class="form-control" name="shop_id"  [(ngModel)]="form.shop_id">
+                      <option *ngFor="let r of responseshop.shopid" value="{{r.id}}">{{r.id}}  {{r.email}} {{r.cat_name}}</option>
+                    </select>
+                  </div>
+                </div>
+        <div class="form-group row">
+          <label for="inputName3" class="col-sm-2 col-form-label">Product Name</label>
+          <div class="col-sm-10">
+            <input type="text" name="product_name" class="form-control" id="inputname3" placeholder="Product_name" [(ngModel)]="form.product_name" required>
+           
+          </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10">
+            <h5><label class="btn btn-primary btn-file">
+                 choose file
+                 <input  type="file" (change)="uploadFile($event)" name="file" style="display: none;"> 
+                
+             </label></h5>
+             </div>
+         </div>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Price</label>
+          <div class="col-sm-10">
+            <input type="text" name="price" class="form-control" id="inputEmail3" placeholder="Price" [(ngModel)]="form.price" required>
+            
+          </div>
+        </div>
+        
+ 
+        <div class="form-group row">
+          <div class="col-sm-10 offset-2">
+
+            <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid">Add </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+<!-- <div class="container">
+  <table class="table">
+    <tr *ngFor="let r of response">
+      <td>{{r.name}}</td>
+      <td>{{r.price}}</td>
+      <td>{{r.shortd}}</td>
+      <td>{{r.quantity}}</td>
+     <td> <a href=""  class="btn btn-primary">Edit</a></td>
+      <td><button class="btn btn-dangar">Delete</button></td>
+    </tr>
+  </table>
+</div> -->
+
